@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cross-Platform" thread-count="3" parallel="tests" verbose="3">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+    <test name="BStackDemoFireFox">
+        <parameter name="localbrowsername" value="firefox"></parameter>
+        <classes>
+            <class name="com.browserstack.BStackDemoTest" />
+        </classes>
+    </test>
+
+    <test name="BStackDemoEdge">
+        <parameter name="localbrowsername" value="edge"></parameter>
+        <classes>
+            <class name="com.browserstack.BStackDemoTest" />
+        </classes>
+
+    </test>
+
+    <test name="BStackDemoChrome">
+        <parameter name="localbrowsername" value="chrome"></parameter>
+        <classes>
+            <class name="com.browserstack.BStackDemoTest" />
+        </classes>
+
+    </test>
+</suite>
